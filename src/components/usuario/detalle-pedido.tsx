@@ -9,11 +9,13 @@ import { format } from "date-fns"
 import { es } from "date-fns/locale"
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronLeft, AlertCircle } from "lucide-react"
+import { ChevronLeft, AlertCircle, Table } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { ScrollArea } from "../ui/scroll-area"
+import { TableHeader, TableRow, TableHead, TableBody, TableCell } from "../ui/table"
+// import { ScrollArea } from "@/components/ui/scroll-area"
+// import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
 interface DetallePedidoProps {
     pedidoId: number

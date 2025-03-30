@@ -1,9 +1,10 @@
 "use client"
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
-import { fetchApi } from "@/lib/fetch-api"
+import { fetchApi } from "@/app/lib/fetch-api"
 import type { Cart, Producto, AddToCartInput, UpdateCartItemInput } from "@/types/cart"
 import { useToast } from "@/hooks/use-toast"
+// import { useToast } from "@/hooks/use-toast"
 
 // Claves de consulta
 export const carritoKeys = {

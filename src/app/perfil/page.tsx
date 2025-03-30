@@ -1,10 +1,14 @@
 import { Header } from "@/components/header"
 import { PerfilForm } from "@/components/usuario/perfil-form"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { auth } from "@/auth"
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+// import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+// import { auth } from "@/auth"
 import { redirect } from "next/navigation"
+import { auth } from "../../../auth"
 import { Separator } from "@/components/ui/separator"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
+// import { Separator } from "@/components/ui/separator"
 
 export default async function PerfilPage() {
     const session = await auth()

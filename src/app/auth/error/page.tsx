@@ -1,9 +1,11 @@
 import { Header } from "@/components/header"
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
 import { AlertCircle } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Button } from "@/components/ui/button"
+// import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 export default function AuthErrorPage() {
     return (

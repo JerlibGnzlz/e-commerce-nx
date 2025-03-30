@@ -1,9 +1,10 @@
 "use client"
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
-import { fetchApi } from "@/lib/fetch-api"
-import { useToast } from "@/hooks/use-toast"
+import { fetchApi } from "@/app/lib/fetch-api"
+// import { useToast } from "@/hooks/use-toast"
 import type { ClienteFormData } from "@/types/auth"
+import { useToast } from "@/hooks/use-toast"
 
 // Claves de consulta
 export const usuarioKeys = {

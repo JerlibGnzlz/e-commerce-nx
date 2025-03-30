@@ -1,4 +1,4 @@
-import { mockCarritoOperaciones } from "@/lib/mock-data"
+import { mockCarritoOperaciones } from "@/app/lib/mock-data"
 import { NextResponse } from "next/server"
 
 export async function GET() {

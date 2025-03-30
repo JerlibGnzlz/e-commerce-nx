@@ -1,8 +1,9 @@
-import { db } from "@/lib/db"
-import { pedido } from "@/lib/db/schema"
-import { auth } from "@/auth"
-import { and, eq } from "drizzle-orm"
+import { db } from "@/app/lib/db"
+import { pedido } from "@/app/lib/schema"
+// import { auth } from "@/auth"
+// import { and, eq } from "drizzle-orm"
 import { NextResponse } from "next/server"
+import { auth } from "../../../../../../auth"
 
 export async function GET(_request: Request, { params }: { params: { id: string } }) {
     try {
@@ -39,5 +40,13 @@ export async function GET(_request: Request, { params }: { params: { id: string 
     } catch (error) {
         return NextResponse.json({ message: "Error al obtener el pedido" }, { status: 500 })
     }
+}
+
+function eq(id: any, pedidoId: number): any {
+    throw new Error("Function not implemented.")
+}
+
+function and(arg0: any, arg1: any) {
+    throw new Error("Function not implemented.")
 }
 

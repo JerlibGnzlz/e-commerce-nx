@@ -1,12 +1,16 @@
 "use client"
 
 import { useState } from "react"
-import { signIn } from "next-auth/react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { useToast } from "@/hooks/use-toast"
+// import { signIn } from "next-auth/react"
+// import { Button } from "@/components/ui/button"
+// import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+// import { useToast } from "@/hooks/use-toast"
 import { useRouter } from "next/navigation"
 import { FcGoogle } from "react-icons/fc"
+import { signIn } from "../../../auth"
+import { Button } from "../ui/button"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "../ui/card"
+import { useToast } from "@/hooks/use-toast"
 
 export function LoginForm() {
     const [isLoading, setIsLoading] = useState(false)

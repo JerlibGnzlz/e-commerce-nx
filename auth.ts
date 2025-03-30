@@ -1,7 +1,7 @@
 import NextAuth from "next-auth"
 import Google from "next-auth/providers/google"
 import { DrizzleAdapter } from "@auth/drizzle-adapter"
-import { db } from "@/lib/db"
+import { db } from "@/app/lib/db"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
     adapter: DrizzleAdapter(db),
@@ -18,12 +18,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             }
             return session
         },
-        async jwt({ token, user }) {
-            if (user) {
-                token.id = user.id
-            }
-            return token
-        },
     },
     pages: {
         signIn: "/auth/login",
@@ -32,5 +26,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     session: {
         strategy: "jwt",
     },
+    debug: process.env.NODE_ENV === "development", // Activa el modo debug en desarrollo
 })
 

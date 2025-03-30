@@ -5,13 +5,15 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+// import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+// import { Input } from "@/components/ui/input"
 import { useActualizarPerfil, usePerfil } from "@/services/usuario-service"
 import { Skeleton } from "@/components/ui/skeleton"
 import type { ClienteFormData } from "@/types/auth"
 import { useSession } from "next-auth/react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form"
+import { Input } from "../ui/input"
 
 const perfilFormSchema = z.object({
     nombre: z.string().min(2, {

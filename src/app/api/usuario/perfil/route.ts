@@ -1,8 +1,9 @@
-import { db } from "@/lib/db"
-import { cliente } from "@/lib/db/schema"
-import { auth } from "@/auth"
-import { eq } from "drizzle-orm"
+import { db } from "@/app/lib/db"
+import { cliente } from "@/app/lib/schema"
+// import { auth } from "@/auth"
+// import { eq } from "drizzle-orm"
 import { NextResponse } from "next/server"
+import { auth } from "../../../../../auth"
 
 export async function GET() {
     try {
@@ -89,5 +90,9 @@ export async function PUT(request: Request) {
     } catch (error) {
         return NextResponse.json({ message: "Error al actualizar el perfil" }, { status: 500 })
     }
+}
+
+function eq(userId: any, userId1: any) {
+    throw new Error("Function not implemented.")
 }
 

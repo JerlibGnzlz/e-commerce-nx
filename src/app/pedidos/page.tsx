@@ -1,8 +1,10 @@
 import { Header } from "@/components/header"
 import { ListaPedidos } from "@/components/usuario/lista-pedidos"
-import { auth } from "@/auth"
+// import { auth } from "@/auth"
 import { redirect } from "next/navigation"
+import { auth } from "../../../auth"
 import { Separator } from "@/components/ui/separator"
+// import { Separator } from "@/components/ui/separator"
 
 export default async function PedidosPage() {
     const session = await auth()

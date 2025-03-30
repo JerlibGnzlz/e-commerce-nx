@@ -1,8 +1,9 @@
 "use client"
 
 import { useQuery } from "@tanstack/react-query"
-import { fetchApi } from "@/lib/fetch-api"
-import type { Product } from "@/types/cart"
+import { fetchApi } from "@/app/lib/fetch-api"
+import { Producto } from "@/types/cart"
+// import type { Product } from "@/types/cart"
 
 // Query keys
 export const productKeys = {
@@ -15,7 +16,7 @@ export const productKeys = {
 export function useProducts() {
     return useQuery({
         queryKey: productKeys.lists(),
-        queryFn: () => fetchApi<Product[]>("/products"),
+        queryFn: () => fetchApi<Producto[]>("/products"),
     })
 }
 

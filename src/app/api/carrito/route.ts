@@ -1,4 +1,4 @@
-import { mockCarritoOperaciones } from "@/lib/mock-data"
+import { mockCarritoOperaciones } from "@/app/lib/mock-data"
 import { addToCartSchema } from "@/types/cart"
 import { NextResponse } from "next/server"
 

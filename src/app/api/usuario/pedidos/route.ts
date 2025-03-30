@@ -1,8 +1,9 @@
-import { db } from "@/lib/db"
-import { pedido } from "@/lib/db/schema"
-import { auth } from "@/auth"
-import { eq } from "drizzle-orm"
+import { db } from "@/app/lib/db"
+import { pedido } from "@/app/lib/schema"
+// import { auth } from "@/auth"
+// import { eq } from "drizzle-orm"
 import { NextResponse } from "next/server"
+import { auth } from "../../../../../auth"
 
 export async function GET() {
     try {
@@ -17,7 +18,7 @@ export async function GET() {
         // Obtener todos los pedidos del usuario
         const pedidos = await db.query.pedido.findMany({
             where: eq(pedido.userId, userId),
-            orderBy: (pedido, { desc }) => [desc(pedido.fecha)],
+            orderBy: (pedido: { fecha: any }, { desc }: any) => [desc(pedido.fecha)],
             with: {
                 detalles: {
                     with: {
@@ -31,5 +32,9 @@ export async function GET() {
     } catch (error) {
         return NextResponse.json({ message: "Error al obtener los pedidos" }, { status: 500 })
     }
+}
+
+function eq(userId: any, userId1: any) {
+    throw new Error("Function not implemented.")
 }
 

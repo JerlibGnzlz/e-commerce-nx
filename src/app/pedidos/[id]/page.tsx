@@ -1,7 +1,8 @@
 import { Header } from "@/components/header"
 import { DetallePedido } from "@/components/usuario/detalle-pedido"
-import { auth } from "@/auth"
+// import { auth } from "@/auth"
 import { redirect } from "next/navigation"
+import { auth } from "../../../../auth"
 
 interface PedidoPageProps {
     params: {
